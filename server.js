@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-app.use('/api', geminiRoutes);
+app.use('/api/gemini', geminiRoutes);
 
 // Error handler
 app.use(errorHandler);
