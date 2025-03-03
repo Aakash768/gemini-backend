@@ -15,7 +15,7 @@ export const processTextWithKeywords = async (text, keywords, customPrompt = '')
   const cleanedText = cleanText(text);
   
   // Default prompt (if no custom prompt is provided)
-  const defaultPrompt = `Summarize the content in 5 points without using any bullets, numbers, or dashes. Each point should be 1-2 sentences or 3 sentences max. Start each point in a new line. Focus on the core subject, addressing the most relevant and critical aspects directly related to it. Avoid using introductory labels like 'What,' 'Why,' or 'When.' Eliminate tangential information and provide a summary that highlights only the most important details, ensuring it centers around the main topic.`;
+  const defaultPrompt = `Summarize the content in 5 points without using any bullets, numbers, or dashes. Each point should be 1-2 sentences or 3 sentences max. Make sure to Start each point in a new line. Focus on the core subject, addressing the most relevant and critical aspects directly related to it. Avoid using introductory labels like 'What,' 'Why,' or 'When.' Eliminate tangential information and provide a summary that highlights only the most important details, ensuring it centers around the main topic.`;
 
   let prompt = customPrompt || defaultPrompt;
 
