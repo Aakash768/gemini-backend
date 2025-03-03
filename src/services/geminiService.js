@@ -21,7 +21,7 @@ export const processTextWithKeywords = async (text, keywords, customPrompt = '')
 
   // Add keyword instruction if keywords are provided
   if (keywords.trim()) {
-    prompt += ` Additionally, ensure the summary emphasizes and incorporates these keywords and related concepts: ${keywords}.`;
+    prompt += ` Additionally, ensure the summary emphasizes and incorporates these keywords and related concepts and each summary point on new line: ${keywords}.`;
   }
 
   prompt += ` ${cleanedText}`;
