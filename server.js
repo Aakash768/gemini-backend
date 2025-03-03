@@ -14,13 +14,10 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(cors());
 
-// const corsOptions = {
-//     origin: process.env.FRONTEND_URL,
-//     optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
-//   };
-  
-//   app.use(cors(corsOptions));
-
+const corsOptions = {
+  origin: process.env.FRONTEND_URL || '*', // Allow all origins if FRONTEND_URL is not set
+  optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
+};
 app.use(express.json());
 
 // Routes
